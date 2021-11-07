@@ -1,18 +1,19 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
+import React, { useEffect } from "react"
+import AOS from "aos"
+import './index.scss'
+import "aos/dist/aos.css"
+import HomeLayout from "../components/layoutManager/homeLayout/HomeLayout"
 
 export default function Home (props) {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <>
-      <h1>Rendering Modes Starter</h1>
-      <ul>
-        <li>
-          <Link to='/dsg'>DSG page</Link>
-        </li>
-        <li>
-          <Link to='/ssr'>SSR page</Link>
-        </li>
-      </ul>
+      <HomeLayout title="Home">
+        <h2>Home page</h2>
+      </HomeLayout>
     </>
   )
 }
