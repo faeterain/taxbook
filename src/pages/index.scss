@@ -1,0 +1,10 @@
+//* Define global variable
+$header-padding: 64px;
+$primary-900: #00218A;
+$primary-700: #233DAA;
+$theme-colors: (
+    "primary": #233DAA
+);
+@import "~bootstrap/scss/bootstrap";
+@import "src/custom/fonts.scss";
+@import "src/custom/components.scss";
