@@ -3,6 +3,9 @@ import AOS from "aos"
 import './index.scss'
 import "aos/dist/aos.css"
 import HomeLayout from "../components/layoutManager/homeLayout/HomeLayout"
+import ReactPageScroller from 'react-page-scroller'
+import FirstSection from "./Home/FirstSection"
+import Banner from "./Home/Banner"
 
 export default function Home (props) {
   useEffect(() => {
@@ -11,9 +14,12 @@ export default function Home (props) {
   }, []);
   return (
     <>
-      <HomeLayout title="Home">
-        <h2>Home page</h2>
-      </HomeLayout>
+        <HomeLayout title="Home">
+          <ReactPageScroller>
+            <Banner />
+            <FirstSection customClass="margin-header" />
+          </ReactPageScroller>
+        </HomeLayout>
     </>
   )
 }

@@ -1,0 +1,91 @@
+.section-background {
+  width: 100%;
+  height: 100vh;
+  background-image: url('/imgs/people_illustration.png'), url('/imgs/decoration.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: 64px 170px, left 116px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding: 80px 64px 40px;
+
+  .content {
+    /* Auto Layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 774px;
+    height: 561px;
+    left: 538px;
+    top: 80px;
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+
+    .title {
+      position: static;
+      width: 482px;
+      height: 76px;
+      left: calc(50% - 482px/2);
+      top: 0px;
+      /* Headline 4 - Bold */
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 120%;
+      /* or 38px */
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.25px;
+      color: #00218A;
+    }
+
+    .block-content {
+      /* Auto Layout */
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      flex-wrap: wrap;
+      padding: 0px;
+      justify-content: space-between;
+      position: static;
+      width: 774px;
+      left: 0px;
+      top: 140px;
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+      margin: 64px 0px;
+
+      .block-of-text {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        position: static;
+        width: 355px;
+        margin-bottom: 64px;
+      }
+
+      .block-title {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 120%;
+        color: #607D8B;
+      }
+
+      .block-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        margin: 12px 0px;
+      }
+    }
+  }
+}
