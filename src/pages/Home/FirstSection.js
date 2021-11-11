@@ -5,12 +5,19 @@ import * as styles from "./FirstSection.module.scss"
 const FirstSection = (props) =>{
   return (
     <>
-      <div className={styles.sectionBackground + " " + props.customClass}>
+      <div className={[styles.sectionBackground + " " + props.customClass, props.currentPage===1?"aos-animate":""].join(' ')}
+      data-aos="zoom-out"
+      data-aos-duration="800">
         <div className={styles.content}>
-          <div className={styles.title}>
+          <div className={[props.currentPage===1?"aos-animate":"", styles.title].join(' ')}
+          data-aos-delay="500"
+          data-aos="fade-left">
             Vì sao <b className="highlight-text">TaxBook</b> được cộng đồng <br /> doanh nghiệp SME lựa chọn?
           </div>
-          <div className={styles.blockContent}>
+          <div className={[props.currentPage===1?"aos-animate":"", styles.blockContent].join(' ')}  
+          data-aos="fade-up"
+          data-aos-delay="700"
+          data-aos-duration="800">
             {//*  block 1 
             }
             <div className={styles.blockOfText}>
