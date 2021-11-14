@@ -29,7 +29,7 @@ export default function Home (props) {
         </HomeLayout>
         <ReactPageScroller className="page-scroll" pageOnChange={addAnimate} >
           <Banner />
-          <FirstSection currentPage={pageNum} customClass="margin-header" />
+          <FirstSection currentPage={pageNum} />
           <SecondSection />
         </ReactPageScroller>
     </>

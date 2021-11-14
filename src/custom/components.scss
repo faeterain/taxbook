@@ -18,7 +18,8 @@
 .btn-outline-primary{
   border-color: $primary-700;
   color: $primary-700;
-  padding: 12px 16px;
+  padding: 13.5px 16px;
+  line-height: 120%;
   border-radius: 8px;
   font-weight: bold;
   &:hover {
@@ -26,27 +27,18 @@
     background-color: $primary-700;
   }
 }
-.large-slim{
-  font-family: 'Nunito-Light';
-  font-weight: 300;
-  font-size: 64px;
-  line-height: 120%;
-  display: flex;
-  align-items: center;
-  letter-spacing: -0.5px;
-  color: #263238;
+.small-black{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
 }
 .large-bold{
-  font-style: normal;
   font-weight: bold;
-  font-size: 64px;
-  line-height: 120%;
-  display: flex;
-  align-items: center;
-  letter-spacing: -0.5px;
-  color: #00BCF0;
+  font-size: 48px;
+  line-height: 140%;
 }
-.med-bold{
+.med-med{
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -55,10 +47,18 @@
   align-items: center;
   letter-spacing: 0.15px;
   color: #263238;
-  margin-top: 24px;
-  margin-bottom: 40px;
 }
-
+.med-bold{
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 120%;
+}
 .highlight-text{
+  color: #00BCF0;
+}
+.color-primary-900{
+  color: #00218A;
+}
+.color-blue-300{
   color: #00BCF0;
 }
