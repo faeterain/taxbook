@@ -22,21 +22,44 @@ function CustomToggle({ children, eventKey }) {
 const SecondSection = (props) => {
   return (
     <>
-      <div className={styles.sectionBackground}>
+      <div className={[styles.sectionBackground, props.currentPage===2?"aos-animate":""].join(' ')}
+      data-aos="zoom-out"
+      data-aos-duration="400">
+        <div className={styles.background}>
+          <img
+          className={styles.decoration}
+          src="/imgs/decoration2.png"
+          alt="Taxbook"
+          />
+          <img
+          className={styles.people}
+          src="/imgs/people_illustration2.png"
+          alt="Taxbook"
+          />
+        </div>
         <div className={styles.content}>
           <div
             className={[
-              props.currentPage === 1 ? "aos-animate" : "",
-              styles.title,
+              props.currentPage === 2 ? "aos-animate" : "",
+              "section-title"
             ].join(" ")}
+            data-aos="zoom-out"
+            data-aos-delay="200"
+            data-aos-duration="400"
           >
             Nhanh chóng chọn được đơn vị dịch vụ <br />
-            Kế toán - Thuế với <b className="highlight-text">3 bước đơn giản</b>
+            Kế toán - Thuế với <span className="highlight-text">3 bước đơn giản</span>
           </div>
           <div className={styles.blockContent}>
             <Accordion
               defaultActiveKey="1"
               flush
+              className={[
+                props.currentPage === 2 ? "aos-animate" : ""
+              ].join(" ")}
+              data-aos="zoom-out"
+              data-aos-delay="400"
+              data-aos-duration="400"
             >
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
@@ -91,14 +114,18 @@ const SecondSection = (props) => {
                 </Accordion.Collapse>
               </Accordion.Item>
             </Accordion>
-            
-            <Button
-              variant="primary"
-              size="lg"
-              className={[props.currentPage===2?"aos-animate":"", styles.btn].join(' ')}
-            >
-              KẾT NỐI NGAY
-            </Button>
+            <div className={styles.buttonPosition} >
+              <Button
+                variant="primary"
+                size="lg"
+                className={[props.currentPage===2?"aos-animate":"", styles.btn].join(' ')}
+                data-aos="zoom-out"
+                data-aos-delay="600"
+                data-aos-duration="400"
+              >
+                KẾT NỐI NGAY
+              </Button>
+            </div>
           </div>
         </div>
       </div>

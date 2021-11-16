@@ -2,6 +2,7 @@
 $header-padding: 64px;
 $primary-900: #00218a;
 $primary-700: #233daa;
+$gray-900: #263238;
 $margin-header: 120px;
 
 @import "src/custom/components.scss";
@@ -11,32 +12,52 @@ $margin-header: 120px;
   >div+div{
     >div>div{
       overflow: hidden;
+      position: relative;
+      &:nth-child(5){
+        overflow: auto;
+      }
+      &:last-child{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+      }
     }
   }
 }
 
 body {
-  font-family: Nunito;
+  font-family: 'Nunito Sans', sans-serif;
+  color: $gray-900;
 }
 .navbar {
-  padding-top: 1.7rem;
-  padding-bottom: 1.7rem;
+  padding-top: 0px;
   background: #ffffff;
+  .navbar-brand{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   .nav-link {
-    font-weight: bold;
     color: #455a64;
-    text-transform: uppercase;
+    height: 19px;
+    /* Button - Bold */
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.0125em;
     position: relative;
     display: block;
     margin: 0 20px;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+    padding: 0px !important;
     &:before {
       position: absolute;
       content: "";
       width: 0;
-      height: 2px;
-      bottom: 5px;
+      height: 3px;
+      top: 26px;
       left: 50%;
       background-color: #455a64;
       -webkit-transition: 0.5s;
@@ -70,8 +91,7 @@ body {
   margin-top: $margin-header !important;
 }
 .header-padding {
-  padding-left: $header-padding !important;
-  padding-right: $header-padding !important;
+  padding: 32px $header-padding !important;
 }
 .banner {
   display: flex;
@@ -79,7 +99,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding: 0px;
-  background: linear-gradient(180deg, #ffffff 0%, #dde4fb 100%);
+  background: #F7F8FC;
   flex: none;
   order: 0;
   align-self: stretch;
@@ -96,5 +116,19 @@ body {
     top: 0;
   }
 }
-.caption {
+
+.accordion-item{
+  background-color: transparent;
+  .accordion-button{
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 1440px){
+.banner{
+  .banner-img{
+    right: 64px;
+  }
+}
+
 }
